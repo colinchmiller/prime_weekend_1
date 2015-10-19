@@ -69,8 +69,10 @@ function salaryMath (salary) {
 	var salaryIncrease = parseInt(salary.employeesalary);
 	totalSalary += salaryIncrease;
 	monthlyCost = Math.round(totalSalary / 12);
-	//adds number to the end without removing earlier number 
+	//adds number to the end without removing earlier number
+	$('#salarytotal').empty();
 	$('#salarytotal').append(totalSalary);
+	$('#salarycost').empty();
 	$('#salarycost').append(monthlyCost);
 	//console.log("Total salary is: ", totalSalary);
 	//console.log("Monthly cost is: ", monthlyCost);
