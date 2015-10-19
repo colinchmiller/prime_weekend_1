@@ -71,9 +71,9 @@ function salaryMath (salary) {
 	monthlyCost = Math.round(totalSalary / 12);
 	//adds number to the end without removing earlier number
 	$('#salarytotal').empty();
-	$('#salarytotal').append(totalSalary);
+	$('#salarytotal').append('<p> Monthly Cost: ' + totalSalary + '</p>');
 	$('#salarycost').empty();
-	$('#salarycost').append(monthlyCost);
+	$('#salarycost').append('<p> Monthly Cost: ' + monthlyCost + '</p>');
 	//console.log("Total salary is: ", totalSalary);
 	//console.log("Monthly cost is: ", monthlyCost);
 
@@ -84,12 +84,13 @@ function toDom	(employee){
 	$('#employeecontainer').append('<div class="employee"></div>');
 	var $el = $('#employeecontainer').children().last();
 
-	$el.append('<p>Employee name: ' + employee.employeename + '</p>');
-	$el.append('<p> Employee number: ' + employee.employeenumber + '</p>');
-	$el.append('<p> Employee title: ' + employee.employeetitle + '</p>');
+	$el.append('<p>Employee First Name: ' + employee.employeefirstname + '</p>');
+	$el.append('<p>Employee Last Name: ' + employee.employeelastname + '</p>');
+	$el.append('<p> Employee Number: ' + employee.employeenumber + '</p>');
+	$el.append('<p> Employee Title: ' + employee.employeetitle + '</p>');
 	$el.append('<p> Yearly Salary: ' + employee.employeesalary + '</p>');
-	$el.append('<p>Salary total: ' + totalSalary + '</p>');
-	$el.append('<p>Monthly cost: ' + monthlyCost + '</p>');
+	// $el.append('<p>Salary Total: ' + totalSalary + '</p>');
+	// $el.append('<p>Monthly Cost: ' + monthlyCost + '</p>');
 };
 
 
